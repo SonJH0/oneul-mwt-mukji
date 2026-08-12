@@ -5,7 +5,7 @@ import json
 # ===== Gemini API 설정 =====
 # 환경변수에서 키 가져오기 (안전!) 🔐
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 # ===== Vercel Serverless 함수 =====
