@@ -1,11 +1,10 @@
 from http.server import BaseHTTPRequestHandler
-import google.generativeai as genai
+from google import genai
 import os
 import json
 
 # ===== Gemini API 설정 =====
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-1.5-flash")
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # ===== Vercel Serverless 함수 =====
 class handler(BaseHTTPRequestHandler):
@@ -54,7 +53,10 @@ class handler(BaseHTTPRequestHandler):
             """
             
             # 3. AI에게 물어보고 답 받기
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(
+    model="gemini-1.5-flash",
+    contents=prompt
+)
             result = response.text
             
             # 4. JS에게 답 돌려주기
