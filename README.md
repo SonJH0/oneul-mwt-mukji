@@ -86,7 +86,7 @@ oneul-mwt-mukji/
 ├── README.md
 ├── requirements.txt        # Python 패키지
 └── vercel.json             # Vercel 설정
-\`\`\`
+
 
 ## 👤 제작자
 
