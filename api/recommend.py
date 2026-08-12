@@ -52,17 +52,14 @@ class handler(BaseHTTPRequestHandler):
             이모지도 적절히 써줘! 😊
             """
             
-            # 3. AI에게 물어보고 답 받기
-            response = client.models.generate_content(
-                model="models/gemini-1.5-flash",
-                contents=prompt
-             )
-            result = response.text
+            # 사용 가능한 모델 확인!
+            model_names = []
+            for m in client.models.list():
+              model_names.append(m.name)
+
+             self._send_json({"result": str(model_names)}, 200)
             
-            # 4. JS에게 답 돌려주기
-            self._send_json({"result": result}, 200)
-            
-        except Exception as e:
+             except Exception as e:
             self._send_json({"error": "잠시 후 다시 시도해주세요!"}, 500)
     
     # 응답 만드는 도우미 함수
