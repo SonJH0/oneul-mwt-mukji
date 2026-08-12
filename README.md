@@ -72,18 +72,20 @@ GEMINI_API_KEY=your_api_key_here
 
 ## 📁 폴더 구조
 
-\`\`\`
 oneul-mwt-mukji/
-├── index.html
-├── recommend.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
 ├── api/
-│   └── recommend.py
-├── requirements.txt
-└── vercel.json
+│   └── recommend.py        # Gemini AI 백엔드
+├── public/
+│   ├── css/
+│   │   └── style.css       # 스타일
+│   ├── js/                 # JavaScript
+│   ├── index.html          # 메인 페이지
+│   ├── recommend.html      # AI 추천 페이지
+│   └── faq.html            # FAQ 페이지
+├── .gitignore
+├── README.md
+├── requirements.txt        # Python 패키지
+└── vercel.json             # Vercel 설정
 \`\`\`
 
 ## 👤 제작자
