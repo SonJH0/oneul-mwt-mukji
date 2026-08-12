@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 추천 받기 🍽️</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="/">오늘 뭐 먹지? 🍽️</a></h1>
+    </header>
+
+    <main>
+        <!-- 1. 기분 선택 -->
+        <div class="form-group">
+          <label>오늘 기분이 어떠세요? 😊</label>
+          <div class="options">
+           <button type="button" class="option-btn mood-btn" data-value="행복해요">😊 행복해요</button>
+           <button type="button" class="option-btn mood-btn" data-value="우울해요">😢 우울해요</button>
+           <button type="button" class="option-btn mood-btn" data-value="스트레스">😤 스트레스</button>
+           <button type="button" class="option-btn mood-btn" data-value="피곤해요">😪 피곤해요</button>
+</div>
+        </div>
+
+        <!-- 2. 음식 종류 선택 -->
+        <div class="form-group">
+          <label>어떤 종류가 끌리세요? 🍜</label>
+          <div class="options">
+            <button type="button" class="option-btn food-btn" data-value="한식">🍚 한식</button>
+            <button type="button" class="option-btn food-btn" data-value="중식">🥟 중식</button>
+            <button type="button" class="option-btn food-btn" data-value="일식">🍣 일식</button>
+            <button type="button" class="option-btn food-btn" data-value="양식">🍝 양식</button>
+          </div>
+          <input type="text" id="food-custom" placeholder="원하는 음식을 직접 적어도 돼요! (예: 매콤한 국물)">
+        </div>
+
+        <!-- 3. 인원 선택 -->
+        <div class="form-group">
+          <label>몇 명이서 드시나요? 👥</label>
+          <div class="options">
+            <button type="button" class="option-btn people-btn" data-value="혼밥">🙋 혼밥</button>
+            <button type="button" class="option-btn people-btn" data-value="여럿">👨‍👩‍👧 여럿이서</button>
+          </div>
+          <input type="number" id="people-count" placeholder="인원수 (여럿일 때만)" min="2" style="display:none;">
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn-submit">메뉴 추천 받기 🚀</button>
+      </form>
+
+      <!-- 로딩 표시 -->
+      <div id="loading" style="display:none;">
+        <p>AI가 열심히 고민 중이에요... 🤔</p>
+      </div>
+
+      <!-- 결과 표시 -->
+      <div id="result" style="display:none;"></div>
+    </main>
+  </div>
+
+    <script src="/js/recommend.js"></script>
+  </body>
+</html>
