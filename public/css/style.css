@@ -223,3 +223,22 @@ body.dark input {
 body.dark .theme-btn {
     background: #2d2d44;
 }
+
+/* ===== 🌙 다크모드 ===== */
+body.dark {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* 다크모드 컨테이너 */
+body.dark .container {
+    background-color: #2a2a2a;
+}
+
+/* 다크모드 버튼 */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
