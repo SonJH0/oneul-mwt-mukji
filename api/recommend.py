@@ -54,7 +54,7 @@ class handler(BaseHTTPRequestHandler):
             
             # 3. AI에게 물어보고 답 받기
             response = client.models.generate_content(
-                model="gemini-flash-lates",
+                model="gemini-2.0-flash-exp",
                 contents=prompt
              )
             result = response.text
