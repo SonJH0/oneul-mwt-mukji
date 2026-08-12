@@ -52,7 +52,7 @@ class handler(BaseHTTPRequestHandler):
 
             # 3. AI에게 추천 받기!
             response = client.models.generate_content(
-                model="model="gemini-flash-latest",
+                model="gemini-flash-latest",
                 contents=prompt
             )
             result = response.text
