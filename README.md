@@ -72,20 +72,8 @@ GEMINI_API_KEY=your_api_key_here
 
 ## 📁 폴더 구조
 
-oneul-mwt-mukji/
-├── api/
-│   └── recommend.py        # Gemini AI 백엔드
-├── public/
-│   ├── css/
-│   │   └── style.css       # 스타일
-│   ├── js/                 # JavaScript
-│   ├── index.html          # 메인 페이지
-│   ├── recommend.html      # AI 추천 페이지
-│   └── faq.html            # FAQ 페이지
-├── .gitignore
-├── README.md
-├── requirements.txt        # Python 패키지
-└── vercel.json             # Vercel 설정
+<img width="309" height="267" alt="image" src="https://github.com/user-attachments/assets/bacb1416-a20d-478b-a5f1-5b64c981ed31" />
+
 
 
 ## 👤 제작자
