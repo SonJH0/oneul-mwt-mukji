@@ -54,9 +54,9 @@ class handler(BaseHTTPRequestHandler):
             
             # 3. AI에게 물어보고 답 받기
             response = client.models.generate_content(
-    model="gemini-1.5-flash",
-    contents=prompt
-)
+                model="gemini-1.5-flash",
+                contents=prompt
+             )
             result = response.text
             
             # 4. JS에게 답 돌려주기
