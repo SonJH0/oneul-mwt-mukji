@@ -59,7 +59,7 @@ submitBtn.addEventListener("click", function() {
     })
       .then(response => response.json())        // 답변 받기
             .then(data => {
-        resultBox.style.display = "block";   // ⭐ 이 줄 추가!
+        resultBox.style.display = "block";   
         resultBox.innerHTML = data.result;
       })
       .catch(error => {                         // 에러 나면
